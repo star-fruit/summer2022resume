@@ -1,0 +1,166 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+
+\newcommand{\gpa}[1]{\textbf{Cum. GPA:} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Tahmeed Khan}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{tahmeedkhan.com}
+% vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://tahmeedkhan.com}
+\newcommand{\yourEmail}{tahmeedkhanwork@gmail.com}
+\newcommand{\yourPhone}{343-541-9614}
+\newcommand{\githubUserName}{star-fruit}
+\newcommand{\linkedInUserName}{tahmeed-khan}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoBold{\yourName} \\ 
+    \textbf {\large \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  Tel: \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}}}
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{BSc. Electrical Engineering and BSc. in Computing Technology}{University of Ottawa | Cum. GPA: 9.8/10}{Ottawa, ON}{Expected Grad. 2025}
+
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeadingWithDate{SUNLABS Summer Student}{}{Python, MATLAB, Linux Centos7, Numpy}{Jul - Aug 2021}
+\begin{bullets}
+    \item \textbf{Successfully adapted SUNLABs MATLAB library into Python used to correct energy yield for bifacial solar cells
+    \item Ran unit and integration tests to verify code conversion and presented results to SUNLABs research group
+    \item Installed and manually tested photovoltaic device simulation software OptiFDTD on two SUNLABS supercomputers Inti (Windows 10) and Dyson (Linux CentOS 7) for future simulation
+    }
+\end {bullets}
+\sectionsep
+
+\projectHeadingWithDate{uOttawa BAJA SAE Python Developer}{https://github.com/jchiedrap/bajaCode}{Python, PyQt, MatPlotLib, gmplot}{Jan 2021}
+\begin{bullets}
+    \item \textbf{Employed Pandas to design a data-analysis program, allowing the team
+    to analyze the route of an off-road vehicle while tracking various parameters
+    (gas, speed, mileage) for improved vehicle performance
+    \item Developed a Graphical User Interface with plots for the above program using gmplot, PyQt5 and MatPlotLib libraries to produce data visualizations on Google maps for post-run analysis
+    \item Documented program functions and graphical user interface for team members}
+\end {bullets}
+\sectionsep
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Extracurriculars}
+\resumeHeading{Engineering Student Society (ESS)}{First-Year Class Representative}{Ottawa, ON}{Sep 2020 – Apr 2021}
+\begin{bullets}
+    \item \textbf{Addressed first-year student concerns to uOttawa’s Student Union representatives at board meetings such as COVID-19 relief fund, student mental health, etc.
+    \item Attended monthly board of directors meetings concerning internal and external matters involving ESS including student relations, clubs, and financing}
+\end{bullets}
+\sectionsep
+
+\resumeHeading{Freelance Tutoring}{School / Private Tutor}{Ottawa, ON}{Feb 2018 – Mar 2021}
+\begin{bullets}
+    \item \textbf{Volunteered to tutor students between grades 9 to 12 during lunch hour twice a
+    week for 210 hours
+    \item Prepared monthly evaluation reports on student progress based on completed
+    homework, and test marks
+    \item Improved 10 student's math grades by ~5-10\% in 3 months with a 90\% satisfaction rate}
+\end{bullets}
+\sectionsep
+
+
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\textbf{Programming Languages:}
+\begin{bullets}
+    \item \textbf{{Python, MATLAB, Arduino, MySQL, C, Java, Circuit Design (Fritzing), Basic Linux CLI}}
+\end{bullets}
+\\
+
+\textbf{Developer Tools:}
+\begin{bullets}
+    \item \textbf{{Visual Studio, Spyder, Jupyter Notebooks, Arduino, NetBeans, Codeblocks}}
+\end{bullets}
+
+\textbf{Scholarships:}
+\begin{bullets}
+    \item \textbf{{Faculty of Engineering Dean’s Merit Scholarship (\$5,000), Admissions Scholarship (\$4,000), Undergraduate Research Opportunities Program (UROP) Scholarship (\$1,000)}}
+\end{bullets}
+
+\textbf{Spoken Languages:}
+\begin{bullets}
+    \item \textbf{{Fluent in English, Basic French}}
+\end{bullets}
+
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
